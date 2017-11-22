@@ -2,7 +2,7 @@
 Q42 is a beautifull site that used a lot of the latest techniques. This is a research to find out how they do it.
 
 ## Fade technique:
-![Scroll technique](''assets-readme/scroll-fade.gif")
+![Scroll technique](assets-readme/scroll-fade.gif)
 
 Every div got a class fading
 ```javascript
