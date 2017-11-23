@@ -22,7 +22,10 @@ After scrolling and the div is above a certain tresshold they added a class: vis
 ```
 Because the div have the selector *visible* , the selector *.fading:not(.visible)* doesn't apply anymore.
 
-For the checking if the element is in view I don't know for certain how they did, but I think they used Jquery. The user __annalarson__ from stack overflow showed an example how to do it. You can find it [here](https://codepen.io/annalarson/pen/GesqK)
+For the checking if the element is in view I don't know for certain how they did, but I think they used Jquery. The user __annalarson__ from codepen showed an example how to do it. You can find it [here](https://codepen.io/annalarson/pen/GesqK)
+![Code pen fade on scroll demo](assets-readme/scroll-fade-codepen-demo.gif)
+
+
 *javascript example*
 ```javascript
 $(document).ready(function() {
