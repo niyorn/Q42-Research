@@ -47,3 +47,48 @@ $(document).ready(function() {
     });
 });
 ```
+
+## Logo animation
+![Logo animation](assets-readme/logo-animate-on-hover.gif)
+*When hovering over the logo an animation is played*
+
+Src text: http://logo.q42.com/.
+The Q42 logo is all bezier curves. The control points and coordinates are in the blueprint below for you to recreate for whatever purpose. The Q42 Green is #84bc2d or PMS 376.
+![Logo](assets-readme/logo-qubic.PNg)
+
+If we look at the html structure we can see that that they used a class 'q42'. This is a custom classed properly created with vue.Js
+```html
+    <q42 class="q42logo" title="Q42" role="img" aria-label="Q42 Logo">
+        <canvas class="fill" width="53" height="80" style="width: 53px; height: 80px;">
+        </canvas>
+    </q42>
+```
+This classed is also used to to call the javascript function that will render the the logo
+
+And instead of using the :hover pseudo class, they used javascript to check if the user hover over the element.
+```javascript
+Q42Logo['webgl-flap'] = function(logo){
+	this.logo = logo;
+	this.started = 0;
+	this.leaving = 0;
+};
+
+var proto = Q42Logo['webgl-flap'].prototype = Object.create(Q42Logo.WebGL.prototype);
+
+proto.initModule = function(){
+	this.logo.element.addEventListener('mouseenter', this.enter.bind(this));
+	this.logo.element.addEventListener('mouseleave', this.leave.bind(this));
+};
+```
+
+When the user hover over the logo element, this javascript function is triggered.
+```javascript
+proto.enter = function(e){
+	this.started = performance.now();
+	this.leaving = 0;
+	this.animating = true;
+	this.render();
+};
+```
+The function than call the WebGL.js (properly custom written) to animate the Logo
+All the source fill can be found on [github]('https://github.com/Q42/logo').
