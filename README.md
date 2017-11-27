@@ -1,5 +1,6 @@
 # Q42-Research
 Q42 is a beautifull site that used a lot of the latest techniques. This is a research to find out how they do it.
+The site is built with [Meteor](http://meteor.com).
 
 ## Fade technique:
 ![Scroll technique](assets-readme/scroll-fade.gif)
@@ -91,4 +92,21 @@ proto.enter = function(e){
 };
 ```
 The function than call the WebGL.js (properly custom written) to animate the Logo
-All the source fill can be found on [github]('https://github.com/Q42/logo').
+All the source fill can be found on [github](https://github.com/Q42/logo).
+
+## Loading contact asynchronously
+When the page is loaded a spinner is displayed
+![Loading spinner](assets-readme/loading-spinner.gif)
+
+*htlm structure*
+```html
+    <div class="spinner">
+        <div class="svg-holder"></div>
+        <div class="svg-holder"></div>
+        <div class="svg-holder"></div>
+        <div class="svg-holder"></div>
+        <div class="svg-holder"></div>
+    </div>
+```
+
+....More to come....
