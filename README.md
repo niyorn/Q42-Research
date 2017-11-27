@@ -54,7 +54,7 @@ $(document).ready(function() {
 
 Src text: http://logo.q42.com/.
 The Q42 logo is all bezier curves. The control points and coordinates are in the blueprint below for you to recreate for whatever purpose. The Q42 Green is #84bc2d or PMS 376.
-![Logo](assets-readme/logo-qubic.PNg)
+![Logo](assets-readme/logo-qubic.PNG)
 
 If we look at the html structure we can see that that they used a class 'q42'. This is a custom classed properly created with vue.Js
 ```html
